@@ -15,7 +15,12 @@ a:hover>div {
     display: none;
 }
 
-
+a:link {
+    text-decoration: none;
+    font-weight: normal;
+    background-color: #151718;
+    color: #151718;
+}
 
 a:visited {
     text-decoration: none;
@@ -241,6 +246,8 @@ ul li a {
     visibility: hidden;
 }
 
+
+/* stupid bars */
 .progress {
     height: 100px;
     border-style: solid;
@@ -265,6 +272,20 @@ ul li a {
     display: contents;
     background-color: #151718;
 }
+
+.skprogress2 {
+    height: 100px;
+    border-style: none;
+}
+
+.skprogress2>svg {
+    height: 100%;
+    display: contents;
+    background-color: #151718;
+}
+
+
+/*fix mobile */
 
 .one_half,
 .one_third,
