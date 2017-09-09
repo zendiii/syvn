@@ -213,8 +213,6 @@ ul li a {
 }
 
 
-/*circles */
-
 #container {
     margin: 20px;
     width: 200px;
@@ -252,7 +250,7 @@ ul li a {
     height: 100px;
     border-style: solid;
     border-width: thick;
-    border-color: #151718
+    border-color: #151718;
 }
 
 .progress>svg {
@@ -273,6 +271,18 @@ ul li a {
     background-color: #151718;
 }
 
+.skprogress {
+    height: 100px;
+    border-style: none;
+}
+
+.skprogress>svg {
+    height: 100%;
+    display: contents;
+    background-color: #151718;
+}
+
+
 .skprogress2 {
     height: 100px;
     border-style: none;
@@ -283,6 +293,18 @@ ul li a {
     display: contents;
     background-color: #151718;
 }
+
+.skprogress3 {
+    height: 100px;
+    border-style: none;
+}
+
+.skprogress3>svg {
+    height: 100%;
+    display: contents;
+    background-color: #151718;
+}
+
 
 
 /*fix mobile */
@@ -477,4 +499,16 @@ footer {
     position: absolute;
     left: 80%;
     margin-top: -50px;
+}
+
+.overthere2{
+    position: absolute;
+    left: 80%;
+    margin-top: 10px;
+    margin-right: -20px;
+}
+
+.pic{
+    max-width: 12%;
+    
 }
