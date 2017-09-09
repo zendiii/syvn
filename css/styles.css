@@ -212,7 +212,6 @@ ul li a {
     position: fixed;
 }
 
-
 #container {
     margin: 20px;
     width: 200px;
@@ -246,6 +245,7 @@ ul li a {
 
 
 /* stupid bars */
+
 .progress {
     height: 100px;
     border-style: solid;
@@ -282,7 +282,6 @@ ul li a {
     background-color: #151718;
 }
 
-
 .skprogress2 {
     height: 100px;
     border-style: none;
@@ -304,7 +303,6 @@ ul li a {
     display: contents;
     background-color: #151718;
 }
-
 
 
 /*fix mobile */
@@ -501,14 +499,13 @@ footer {
     margin-top: -50px;
 }
 
-.overthere2{
+.overthere2 {
     position: absolute;
     left: 80%;
     margin-top: 10px;
     margin-right: -20px;
 }
 
-.pic{
-    max-width: 12%;
-    
+.pic {
+    width: 12%;
 }
