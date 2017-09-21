@@ -454,6 +454,8 @@ hr {
     letter-spacing: 2px
 }
 
+/* font awesome icon edits*/
+
 .faicon-heart:hover {
     color: #EA4C89;
     text-decoration: none;
@@ -463,6 +465,8 @@ hr {
     color: #0CF910;
     text-decoration: none;
 }
+
+/* text spacing and such */
 
 .emp {
     text-indent: 2%;
