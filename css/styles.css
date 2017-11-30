@@ -17,20 +17,21 @@ a:hover>div {
 
 a:link {
     text-decoration: none;
+    
     font-weight: normal;
     background-color: #151718;
-    color: #151718;
+    color: #11c1f3;
 }
 
 a:visited {
-    text-decoration: none;
+    
     font-weight: normal;
     background-color: #151718;
     color: #11c1f3;
 }
 
 a:hover {
-    text-decoration: underline;
+    
     font-weight: bold;
     background-color: #151718;
     color: #EA4C89;
@@ -249,6 +250,11 @@ ul li a {
     position: inherit;
 }
 
+.xtext6{
+    padding: 3%;
+    position: inherit;
+}
+
 .sr .fooReveal {
     visibility: hidden;
 }
@@ -331,9 +337,9 @@ ul li a {
 }
 
 .rightspace {
-    position: relative;
-    right: -59%;
-    width: 300px;
+    position: inherit;
+
+    width: 100%;
     height: 100px;
     font-size: 30px;
 }
@@ -342,6 +348,7 @@ ul li a {
     position: inherit;
     top: -90px;
     right: -20px;
+    left: 8px;
 }
 
 .upwardspace2 {
@@ -466,6 +473,21 @@ hr {
     text-decoration: none;
 }
 
+.faicon-android{
+    color: #a4c639;
+    
+}
+
+.faicon-apple{
+    color: #8e8e93;
+    text-decoration: none;
+}
+
+.faicon-windows{
+    color: #0078d7;
+    text-decoration: none;
+}
+
 /* text spacing and such */
 
 .emp {
@@ -498,6 +520,30 @@ hr {
     padding-right: 9px;
 }
 
+.empicon{
+    margin-left: 429px;
+}
+
+.empicon2{
+    margin-left: 444px;
+}
+
+.empicon3{
+    margin-left: 304px;
+}
+
+.empicon4{
+    margin-left: 418px;
+}
+
+.empicon5{
+    margin-left: 415px;
+}
+
+.center{
+    text-align: center;
+}
+
 .overthere {
     position: absolute;
     left: 80%;
@@ -515,3 +561,15 @@ hr {
     text-decoration: none;
     color: #11c1f3
 }
+
+.nicespaceing{
+    
+padding-left: 150px;
+}
+
+.listcolor{
+    background-color: #151718;
+    font-size: 25px;
+    border-style: inherit;
+}
+
