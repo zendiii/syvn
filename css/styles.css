@@ -255,6 +255,12 @@ ul li a {
     position: inherit;
 }
 
+.imgcenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .sr .fooReveal {
     visibility: hidden;
 }
