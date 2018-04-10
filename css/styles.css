@@ -7,31 +7,31 @@ body {
     color: aliceblue;
 }
 
-a>div {
+a > div {
     display: none;
 }
 
-a:hover>div {
+a:hover > div {
     display: none;
 }
 
 a:link {
     text-decoration: none;
-    
+
     font-weight: normal;
     background-color: #151718;
     color: #11c1f3;
 }
 
 a:visited {
-    
+
     font-weight: normal;
     background-color: #151718;
     color: #11c1f3;
 }
 
 a:hover {
-    
+
     font-weight: bold;
     background-color: #151718;
     color: #EA4C89;
@@ -250,12 +250,12 @@ ul li a {
     position: inherit;
 }
 
-.xtext6{
+.xtext6 {
     padding: 3%;
     position: inherit;
 }
 
-.imgcenter{
+.imgcenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -275,7 +275,7 @@ ul li a {
     border-color: #151718;
 }
 
-.progress>svg {
+.progress > svg {
     height: 100%;
     display: contents;
     background-color: #151718;
@@ -287,7 +287,7 @@ ul li a {
     border-style: none;
 }
 
-.progress2>svg {
+.progress2 > svg {
     height: 100%;
     display: contents;
     background-color: #151718;
@@ -298,7 +298,7 @@ ul li a {
     border-style: none;
 }
 
-.skprogress>svg {
+.skprogress > svg {
     height: 100%;
     display: contents;
     background-color: #151718;
@@ -309,7 +309,7 @@ ul li a {
     border-style: none;
 }
 
-.skprogress2>svg {
+.skprogress2 > svg {
     height: 100%;
     display: contents;
     background-color: #151718;
@@ -320,7 +320,7 @@ ul li a {
     border-style: none;
 }
 
-.skprogress3>svg {
+.skprogress3 > svg {
     height: 100%;
     display: contents;
     background-color: #151718;
@@ -479,17 +479,17 @@ hr {
     text-decoration: none;
 }
 
-.faicon-android{
+.faicon-android {
     color: #a4c639;
-    
+
 }
 
-.faicon-apple{
+.faicon-apple {
     color: #8e8e93;
     text-decoration: none;
 }
 
-.faicon-windows{
+.faicon-windows {
     color: #0078d7;
     text-decoration: none;
 }
@@ -526,27 +526,27 @@ hr {
     padding-right: 9px;
 }
 
-.empicon{
+.empicon {
     margin-left: 429px;
 }
 
-.empicon2{
+.empicon2 {
     margin-left: 444px;
 }
 
-.empicon3{
+.empicon3 {
     margin-left: 304px;
 }
 
-.empicon4{
+.empicon4 {
     margin-left: 418px;
 }
 
-.empicon5{
+.empicon5 {
     margin-left: 415px;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -568,14 +568,17 @@ hr {
     color: #11c1f3
 }
 
-.nicespaceing{
-    
-padding-left: 150px;
+.nicespaceing {
+
+    padding-left: 150px;
 }
 
-.listcolor{
+.listcolor {
     background-color: #151718;
     font-size: 25px;
     border-style: inherit;
 }
 
+.lilleft {
+    padding-left: 4em;
+}
