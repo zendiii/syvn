@@ -581,4 +581,10 @@ hr {
 
 .lilleft {
     padding-left: 4em;
+    color: white;
+}
+
+.card {
+    background-color: #151718;
+    border: none;
 }
