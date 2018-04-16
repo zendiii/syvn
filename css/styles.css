@@ -580,7 +580,12 @@ hr {
 }
 
 .lilleft {
-    padding-left: 4em;
+    padding-left: 10em;
+    color: white;
+}
+
+.lilleft2 {
+    padding-left: 11em;
     color: white;
 }
 
