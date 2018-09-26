@@ -24,7 +24,7 @@ window.onload = function onLoad() {
         
         }
     });
-    circle.animate(0.6);
+    circle.animate(0.8);
 
     //progress tcc
     var circle = new ProgressBar.SemiCircle('#progress2', {
