@@ -10,7 +10,7 @@ window.onload = function onLoad() {
             a: 0
         },
         to: {
-            color: '#11c1f3',
+            color: '#0CF910',
             a: 1
         },
         step: function (state, circle) {
@@ -24,7 +24,7 @@ window.onload = function onLoad() {
         
         }
     });
-    circle.animate(0.9);
+    circle.animate(1.0);
 
     //progress tcc
     var circle = new ProgressBar.SemiCircle('#progress2', {

@@ -2,7 +2,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #151718;
+    background-color: #1D2021;
     font-family: "Montserrat", sans-serif;
     color: aliceblue;
 }
@@ -19,21 +19,21 @@ a:link {
     text-decoration: none;
 
     font-weight: normal;
-    background-color: #151718;
+    background-color: #1D2021;
     color: #11c1f3;
 }
 
 a:visited {
 
     font-weight: normal;
-    background-color: #151718;
+    background-color: #1D2021;
     color: #11c1f3;
 }
 
 a:hover {
 
     font-weight: bold;
-    background-color: #151718;
+    background-color: #1D2021;
     color: #EA4C89;
 }
 
@@ -55,7 +55,7 @@ footer {
 }
 
 #sidebar {
-    background: #151718;
+    background: #1D2021;
     width: 200px;
     height: 190%;
     display: block;
@@ -272,14 +272,14 @@ ul li a {
     height: 100px;
     border-style: solid;
     border-width: thick;
-    border-color: #151718;
+    border-color: #1D2021;
 }
 
 .progress > svg {
     height: 100%;
     display: contents;
-    background-color: #151718;
-    border-style: #151718;
+    background-color: #1D2021;
+    border-style: #1D2021;
 }
 
 .progress2 {
@@ -290,7 +290,7 @@ ul li a {
 .progress2 > svg {
     height: 100%;
     display: contents;
-    background-color: #151718;
+    background-color: #1D2021;
 }
 
 .skprogress {
@@ -301,7 +301,7 @@ ul li a {
 .skprogress > svg {
     height: 100%;
     display: contents;
-    background-color: #151718;
+    background-color: #1D2021;
 }
 
 .skprogress2 {
@@ -312,7 +312,7 @@ ul li a {
 .skprogress2 > svg {
     height: 100%;
     display: contents;
-    background-color: #151718;
+    background-color: #1D2021;
 }
 
 .skprogress3 {
@@ -323,7 +323,7 @@ ul li a {
 .skprogress3 > svg {
     height: 100%;
     display: contents;
-    background-color: #151718;
+    background-color: #1D2021;
 }
 
 
@@ -574,7 +574,7 @@ hr {
 }
 
 .listcolor {
-    background-color: #151718;
+    background-color: #1D2021;
     font-size: 25px;
     border-style: inherit;
 }
@@ -590,7 +590,7 @@ hr {
 }
 
 .card {
-    background-color: #151718;
+    background-color: #1D2021;
     border: none;
 }
 
