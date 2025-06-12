@@ -1,7 +1,6 @@
 # syvn
 Sayvion Mayfield's resume website | circa July 2017 
 
-The Revival
-## yay coding
-
+- Fix hamburger menu and add additional pages.
+- Update links
 
