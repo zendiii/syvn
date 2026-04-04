@@ -1,3 +1,36 @@
+/**
+ * styles.css — Primary Stylesheet for SYVN Resume Website
+ * Version: 2.2.0
+ *
+ * Table of Contents:
+ * 1. Base / Reset
+ * 2. Links
+ * 3. Footer
+ * 4. Sidebar (legacy)
+ * 5. Sidenav (current hamburger menu)
+ * 6. Animations & Timing (#sauce*)
+ * 7. Navigation Button (#newside)
+ * 8. Spacing Utilities (.xtext*)
+ * 9. Images (.imgcenter)
+ * 10. ScrollReveal
+ * 11. Progress Bars (.progress, .progress2, .skprogress*)
+ * 12. Responsive Grid Helpers
+ * 13. Positioning (.rightspace, .upwardspace*)
+ * 14. Horizontal Rule
+ * 15. Max-Width Container (.hoc)
+ * 16. Mobile Breakpoints
+ * 17. Footer Row (.row5)
+ * 18. Font Awesome Icon Colors (.faicon-*)
+ * 19. Text & Spacing Helpers (.emp*)
+ * 20. Layout Helpers (.center, .overthere*, .nicespaceing)
+ * 21. Card Overrides
+ * 22. Lead Text Override
+ */
+
+/* ==========================================================================
+   1. Base / Reset
+   ========================================================================== */
+
 @import url("fontawesome-4.6.3.min.css");
 body {
     margin: 0px;
@@ -15,9 +48,12 @@ a:hover > div {
     display: none;
 }
 
+/* ==========================================================================
+   2. Links — Light blue (#11c1f3) default, pink (#EA4C89) on hover
+   ========================================================================== */
+
 a:link {
     text-decoration: none;
-
     font-weight: normal;
     background-color: #1D2021;
     color: #11c1f3;
@@ -44,8 +80,12 @@ a:active {
     color: white;
 }
 
+/* ==========================================================================
+   3. Footer
+   ========================================================================== */
+
 footer {
-    position: bottom;
+    position: relative;
     font-size: 15px;
     text-align: center;
     color: aliceblue;
@@ -53,6 +93,10 @@ footer {
     height: 50px;
     padding-top: 60px;
 }
+
+/* ==========================================================================
+   4. Sidebar (legacy — replaced by sidenav, kept for reference)
+   ========================================================================== */
 
 #sidebar {
     background: #1D2021;
@@ -66,23 +110,18 @@ footer {
     transition: left 0.3s linear;
 }
 
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
 #sidebar.visible {
     left: 0px;
     transition: left 0.3s linear;
 }
 
-ul {
+#sidebar ul {
     margin: 0px;
     padding: 10px;
     padding-top: 100px;
 }
 
-ul li {
+#sidebar ul li {
     list-style: none;
     text-decoration: none;
 }
@@ -96,7 +135,7 @@ ul li {
     transition-timing-function: linear;
 }
 
-ul li a {
+#sidebar ul li a {
     background: #1C1E1F;
     color: #ccc;
     border-top: 10px solid #111;
@@ -120,8 +159,11 @@ ul li a {
     top: 0px;
     right: -60px;
     -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-animation-delay: 5s;
+    animation-delay: 5s;
     -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 #sidebar-btn span {
@@ -139,6 +181,10 @@ ul li a {
     width: 50%;
 }
 
+
+/* ==========================================================================
+   5. Sidenav — Current hamburger slide-out menu
+   ========================================================================== */
 
 /* new navbar */
 
@@ -195,23 +241,40 @@ ul li a {
     text-align: center;
 }
 
+/* ==========================================================================
+   6. Animation Timing Overrides (#sauce, #sauce2, #sauce3)
+   ========================================================================== */
+
 #sauce {
     -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
     -webkit-animation-delay: 2s;
+    animation-delay: 2s;
     -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 #sauce2 {
     -webkit-animation-duration: 5s;
+    animation-duration: 5s;
     -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 #sauce3 {
     -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-delay: 2s;
+    animation-delay: 2s;
     -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
+
+/* ==========================================================================
+   7. Navigation Button (#newside) — Hamburger menu trigger
+   ========================================================================== */
 
 #newside {
     font-size: 36px;
@@ -229,6 +292,10 @@ ul li a {
     height: 200px;
     position: relative;
 }
+
+/* ==========================================================================
+   8. Spacing Utilities (.xtext2–6) — Padding-based vertical spacers
+   ========================================================================== */
 
 .xtext2 {
     padding: 15%;
@@ -255,16 +322,28 @@ ul li a {
     position: inherit;
 }
 
+/* ==========================================================================
+   9. Images (.imgcenter) — Centered block images
+   ========================================================================== */
+
 .imgcenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* ==========================================================================
+   10. ScrollReveal — Hidden state for reveal animations
+   ========================================================================== */
+
 .sr .fooReveal {
     visibility: hidden;
 }
 
+
+/* ==========================================================================
+   11. Progress Bars — SVG-based animated progress indicators
+   ========================================================================== */
 
 /* stupid bars */
 
@@ -279,7 +358,7 @@ ul li a {
     height: 100%;
     display: contents;
     background-color: #1D2021;
-    border-style: #1D2021;
+    border: none;
 }
 
 .progress2 {
@@ -326,6 +405,10 @@ ul li a {
     background-color: #1D2021;
 }
 
+
+/* ==========================================================================
+   12. Responsive Grid Helpers — Float resets for mobile
+   ========================================================================== */
 
 /*fix mobile */
 
@@ -387,6 +470,10 @@ ul li a {
     right: 0px;
 }
 
+/* ==========================================================================
+   14. Horizontal Rule — Light blue (#11c1f3) divider
+   ========================================================================== */
+
 hr {
     display: block;
     height: 1px;
@@ -397,6 +484,10 @@ hr {
 }
 
 
+/* ==========================================================================
+   15. Max-Width Container (.hoc) — 978px content wrapper
+   ========================================================================== */
+
 /* Max width---------------------------------------------------------------------------- */
 
 @media screen and (min-width:978px) {
@@ -405,6 +496,10 @@ hr {
     }
 }
 
+
+/* ==========================================================================
+   16. Mobile Breakpoints — max-width: 900px
+   ========================================================================== */
 
 /* Mobile Devices
 --------------------------------------------------------------------------------------------------------------- */
@@ -419,15 +514,12 @@ hr {
     #header #logo {
         margin-top: 3px;
     }
-    #mainav {}
     #mainav ul {
         display: none;
     }
     #mainav form {
         display: block;
     }
-    #breadcrumb {}
-    .container {}
     #comments input[type="reset"] {
         margin-top: 10px;
     }
@@ -435,13 +527,15 @@ hr {
         display: inline-block;
         margin: 0 5px 5px 0;
     }
-    #footer {}
-    #copyright {}
     #copyright p:first-of-type {
         margin-bottom: 120px;
     }
 }
 
+
+/* ==========================================================================
+   17. Footer Row (.row5) — Black background footer bar
+   ========================================================================== */
 
 /*footer */
 
@@ -466,6 +560,10 @@ hr {
 #space {
     letter-spacing: 2px
 }
+
+/* ==========================================================================
+   18. Font Awesome Icon Colors (.faicon-*)
+   ========================================================================== */
 
 /* font awesome icon edits*/
 
@@ -493,6 +591,10 @@ hr {
     color: #0078d7;
     text-decoration: none;
 }
+
+/* ==========================================================================
+   19. Text & Spacing Helpers (.emp*) — Indentation, alignment, margins
+   ========================================================================== */
 
 /* text spacing and such */
 
@@ -546,6 +648,10 @@ hr {
     margin-left: 415px;
 }
 
+/* ==========================================================================
+   20. Layout Helpers — Positioning, alignment, misc utilities
+   ========================================================================== */
+
 .center {
     text-align: center;
 }
@@ -589,12 +695,21 @@ hr {
     color: white;
 }
 
+/* ==========================================================================
+   21. Card Overrides — Dark background, no border
+   ========================================================================== */
+
 .card {
     background-color: #1D2021;
     border: none;
 }
 
+/* ==========================================================================
+   22. Lead Text Override
+   TODO: Fix invalid CSS — "bold" is not a valid property/value pair.
+         Should be: font-weight: bold;
+   ========================================================================== */
+
 .lead {
-    
-        bold
+    font-weight: bold;
 }

@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- FIX MOBILE RESPONSIVENESS -->
+<!--
+    index.html — SYVN Resume Website (Main Page)
+    Version: 2.2.0
+    Author: Sayvion Mayfield
+
+    Sections:
+      1. About (#about)
+      2. Education (#edu)
+      3. Technical Skills (#madskillz)
+      4. Employment (#jobs)
+      5. Projects & Miscellaneous (#misc)
+      6. Contact (#contact)
+
+    Dependencies: See README.md for full list
+    TODO: Fix mobile responsiveness
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -11,10 +26,8 @@
     <!-- Minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Optional Theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <!--scrollingthings-->
-    <link rel="stylesheet" href="bower_components/aos/dist/aos.css">
+    <!-- NOTE: Bootstrap 3 theme removed — conflicts with Bootstrap 4 -->
+    <!-- NOTE: AOS (bower) removed — bower_components not present -->
     <!-- My styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/sidebar.css">
@@ -37,22 +50,12 @@
 
 
 
-    <!--<div id="sidebar" >
-		<ul>
-           	<li id="txt"><a href="#">About</a></li>
-			<li><a href="#">Education</a></li>
-			<li><a href="#">Technical Skills</a></li>
-			<li><a href="#">Previous Employment</a></li>
-			<li><a href="#">Other Things</a></li>
-		</ul>
+    <!-- ========== NAVIGATION — Hamburger side menu ========== -->
 
-		<div  id="sidebar-btn" class="hamburger" class="animated rubberBand" >
-			<span ></span>
-			<span ></span>
-			<span ></span>
-		</div>  -->
-    <span id="newside" class="navicon-button larr" onclick="openNav()" class="animated bounce blues">&#9779;</span>
+    <!-- Hamburger button (fixed position via sidebar.css) -->
+    <span id="newside" class="navicon-button larr animated bounce blues" onclick="openNav()">&#9779;</span>
 
+    <!-- Slide-out side navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#about" onclick="closeNav()">About</a>
@@ -61,6 +64,7 @@
         <a href="#jobs" onclick="closeNav()">Employment</a>
         <a href="#misc" onclick="closeNav()">Other Things</a>
         <a href="#contact" onclick="closeNav()">Contact</a>
+        <a href="showcase.html">Showcase</a>
     </div>
 
 
@@ -68,15 +72,17 @@
 
 
 
+        <!-- ========== MAIN CONTENT ========== -->
     <div class="hoc container-fluid">
         <div class="starter-template">
             <div>
 
+                <!-- ========== SECTION 1: ABOUT (#about) ========== -->
                 <div class="xtext4"></div>
                 <h1 class="animated tada xtext">
                     <a name="about" target="_blank" title="" class="faicon-heart fa fa-address-card animated pulse" id="sauce3"></a> About</h1>
                 <hr>
-                <p class="lead" class="abreveal">call me say! </p>
+                <p class="lead abreveal">call me say! </p>
 
 
                 <h3 class="emp lead">My name is Sayvion Mayfield, I am currently an Information Technology student. I hope to pursue a career in network/systems administration and network engineering. Welcome to my online resumé! </h3>
@@ -94,6 +100,7 @@
 
 
 
+                <!-- ========== SECTION 2: EDUCATION (#edu) ========== -->
                 <h1 class="animated pulse xtext">
                     <a name="edu" target="_blank" title="" class="faicon-heart fa fa-graduation-cap animated pulse" id="sauce3"></a> Education</h1>
                 <hr>
@@ -127,7 +134,8 @@
                 <div class="xtext4"></div>
 
 
-                <h1 class="animated pulse xtext" class="skill">
+                <!-- ========== SECTION 3: TECHNICAL SKILLS (#madskillz) ========== -->
+                <h1 class="animated pulse xtext skill">
                     <a name="madskillz" target="_blank" title="" class="faicon-heart fa fa-laptop animated pulse" id="sauce3"></a> Technical Skills</h1>
                 <hr>
 
@@ -234,69 +242,17 @@
 
                 <div class="xtext6"></div>
 
-                <div class="row">
-                    <div class="col-sm-12 center">
-                        <h1>Platforms </h1>
-                    </div>
-                    <div class="col-sm-5 bg-dark">
-                        <h2>Android</h2>
-                    </div>
-                    <div class="col-sm-3 bg-dark">
-                        <h2> <i class="faicon-android fa fa-android"></i></h2>
-                    </div>
-                    <div class="col-sm-3 bg-dark">
-                        <h2>5.0 - 8.1</h2>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-5">
-                        <h2>iOS</h2>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2> <i class="faicon-apple fa fa-apple"></i></h2>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2>6.0 - 12.1</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-5 bg-dark">
-                        <h2>Windows</h2>
-                    </div>
-                    <div class="col-sm-3 bg-dark">
-                        <h2> <i class="faicon-windows fa fa-windows"></i></h2>
-                    </div>
-                    <div class="col-sm-3 bg-dark">
-                        <h2>7 - 10</h2>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-5">
-                        <h2>Windows Server</h2>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2> <i class="faicon-windows fa fa-windows"></i></h2>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2>2016</h2>
-                    </div>
-                </div>
-
-                <div class="xtext4"></div>
-
+                
+                <!-- ========== SECTION 4: EMPLOYMENT (#jobs) ========== -->
                 <h1 class="animated pulse xtext emp">
                     <a name="jobs" target="_blank" title="" class="faicon-heart fa fa-handshake-o animated pulse" id="sauce3"></a> Employment &amp Experience</h1>
                 <hr>
 
                 <p class="lead"> Network Engineer , <b>Cisco Systems</b>,<i> Morrisville, NC (July 2019 - Present)</i></p>
                 <blockquote>
-
+                    <ul>
                     <li>TBA</li>
-                    
+                    </ul>
                 </blockquote>
 
 
@@ -305,16 +261,14 @@
                 
                 <p class="lead"> Service Desk Agent, <b>Brandt Information Services</b>,<i> Tallahassee, FL (January 2019 - July 2019)</i></p>
                 <blockquote>
-
+                    <ul>
                     <li>Providing callers with application/website support and basic troubleshooting.</li>
                     <li>Providing Point of Sale agent callers with basic hardware and application troubleshooting including internet/connectivity, site access, user account management/password resets; technical site errors/issues, and more.</li>
                     <li>Accepting inbound phone calls from customers interested in purchasing hunting or fishing licenses.</li>
                     <li>Answering basic inquiries about hunting/fishing regulation while navigating the state wildlife agency website.</li>
                     <li>Processing license/permit sales for customers following issuance requirements and procedures.</li>
-                    <li>Processing documents containing sensitive customer information.</li> 
-
-
-
+                    <li>Processing documents containing sensitive customer information.</li>
+                    </ul>
                 </blockquote>
 
 
@@ -322,28 +276,26 @@
 
                 <p class="lead"> IT Professional Intern, <b>Florida State</b>,<i> Tallahassee, FL (September 2018 - December 2018)</i></p>
                 <blockquote>
-
+                    <ul>
                     <li>Moved Linux websites from a VMware platform to a Hyper-V platform.</li>
                     <li>Built Virtual Machines for the Microsoft Hyper-V platform. </li>
                     <li>Connected Virtual Machines to the FSU computer network. </li>
                     <li>Analyzed server logs to help resolve issues with the servers.</li>
                     <li>Managed server updates through SCCM.</li>
-
-
+                    </ul>
                 </blockquote>
 
                 <div class="xtext5"></div>
 
                 <p class="lead"> Information Technology | Intern, <b>Synovus</b>,<i> Columbus, GA (June 2018-August 2018)</i></p>
                 <blockquote>
-
+                    <ul>
                     <li>Requested and configured servers based on development, quality assurance, testing, and production environments.</li>
                     <li>Updated Disaster Recovery Plans for the mortgage team.</li>
                     <li>Updated documentation of related applications used by the mortgage team.</li>
                     <li>Collaborated with the mortgage team on implementing regulatory rules within our mortgage software.</li>
                     <li>Installed a stack of 5 Cisco switches</li>
-
-
+                    </ul>
                 </blockquote>
 
                 <div class="xtext5"></div>
@@ -351,30 +303,30 @@
 
                 <p class="lead"> Image Specialist | Intern, <b>United Solutions</b>,<i> Tallahassee, FL (July 2017-October 2017)</i></p>
                 <blockquote>
-
+                    <ul>
                     <li>Documentation preparation.</li>
                     <li>Organized sensitive files for digital processing and compartmentalization.</li>
                     <li>Prepared sensitive documents to import into OpenText Documentum software.</li>
                     <li>Scanned sensitive documents into a database |> tagged, filled meta data, etc.</li>
                     <li>Participated in weekly meetings with the CEO of United Solutions.</li>
-
+                    </ul>
                 </blockquote>
 
                 <div class="xtext5"></div>
 
 
 
-                <p class="lead"> Intern, <b>Florida A&amp;M Univeristy</b>, <i>Tallahassee, FL (May 2016-August 2016)</i></p>
+                <p class="lead"> Intern, <b>Florida A&amp;M University</b>, <i>Tallahassee, FL (May 2016-August 2016)</i></p>
 
 
                 <p class="emp">At FAMU's Research and Science center, I conducted research on potential anti-proliferative compounds for LNCAP prostate cancer cells. The tasks involved cell culturing LNCAP prostate cancer cells (also breast cancer cells), calculating dosages, testing the effects of the compounds, developing timed analysis, and much more.</p>
                 <blockquote>
-
+                    <ul>
                     <li>Compiled research information and accumulated data for compounds and prostate cancer cells.</li>
                     <li>Trained high school STEM students (3) on lab procedures.</li>
                     <li>Maintained lab safety rules and regulations.</li>
                     <li>Collaborated on experiments with lab mates and graduate students.</li>
-
+                    </ul>
                 </blockquote>
 
 
@@ -382,7 +334,8 @@
                 <div class="xtext4"></div>
 
 
-                <h1 class="animated pulse xtext" class="emp">
+                <!-- ========== SECTION 5: PROJECTS & MISCELLANEOUS (#misc) ========== -->
+                <h1 class="animated pulse xtext emp">
                     <a name="misc" target="_blank" title="" class="faicon-heart fa fa-archive animated pulse" id="sauce3"></a> Projects and Miscellaneous</h1>
                 <hr>
 
@@ -403,7 +356,7 @@
 
                     <div class="col-6 ">
                         <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="images/aitp.jpg" style="width: 100%;" alt="Card image cap">
+                            <img class="card-img-top" src="images/aitp.jpg" style="width: 100%;" alt="FSU AITP">
                             <div class="card-block">
                                 <h3 class="card-title"> FSU Association of IT Professionals </h3>
                                 <p class="card-text"> AITP is an organization comprised of career-minded individuals who seek to expand their potential through events, networking, mentoring, and socialization. Click <a href="http://aitp.fsu.edu/">here</a> for more.</p>
@@ -413,7 +366,7 @@
 
                     <div class="col-sm-6 ">
                         <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="images/15977386_1379969785387944_2308830058911006244_n.png" style="width: 80%;" alt="Card image cap">
+                            <img class="card-img-top" src="images/15977386_1379969785387944_2308830058911006244_n.png" style="width: 80%;" alt="HackFSU">
                             <div class="card-block">
                                 <h3 class="card-title"> HackFSU </h3>
                                 <p class="card-text"> Collaborated with the android development team for HackFSU <a href="https://hackfsu.com/" title="hackfsu.com" class="nolinks">2018</a>.</p>
@@ -426,7 +379,7 @@
                 <div class="row">
                     <div class="col-sm-6 ">
                         <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="images/STEM_500x500.jpg" style="width: 80%; center;" alt="Card image cap">
+                            <img class="card-img-top" src="images/STEM_500x500.jpg" style="width: 80%;" alt="STEM Star Scholar">
                             <div class="card-block">
                                 <h3 class="card-title"> STEM Star Scholar </h3>
                                 <p class="card-text"> Tallahassee Community College, Tallahassee, FL (August 2014-May 2017). Click <a href="http://www.tcc.fl.edu/academics/academic-enrichment/stem-program/" title="http://www.tcc.fl.edu/academics/academic-enrichment/stem-program/">here</a> for more.</p>
@@ -436,7 +389,7 @@
 
                     <div class="col-sm-6 ">
                         <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="images/apc.jpg" style="width: 100%;" alt="Card image cap">
+                            <img class="card-img-top" src="images/apc.jpg" style="width: 100%;" alt="Audio Production Club">
                             <div class="card-block">
                                 <h3 class="card-title"> Audio Production Club </h3>
                                 <p class="card-text"> APC is a club where people of all talents come together and create music. Everyone is welcome, even if you want to learn something. Click <a href="https://fsu.campuslabs.com/engage/organization/APC/gallery/album/153453">here</a> for more.</p>
@@ -444,37 +397,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="xtext5"></div>
-                <!--
-                <div class="row">
-                    <div class="col-6 ">
-                        <div class="card" style="width: 5rem;">
-                            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BhaGL-blcwU/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:558px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                                <div style="padding:8px;">
-                                    <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;">
-                                        <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                                    </div>
-                                    <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BhaGL-blcwU/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">When you short your motherboard. 😥</a></p>
-                                    <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/gradeaplanb/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Sayvion Mayfield</a> (@gradeaplanb) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-04-10T23:06:34+00:00">Apr 10, 2018 at 4:06pm PDT</time></p>
-                                </div>
-                            </blockquote>
-                            <script async defer src="//www.instagram.com/embed.js"></script>
-                        </div>
-                    </div>
-                    -->
-                <!--    <div class="col-6 ">
-                        <div class="card" style="width: 20rem;">
-                            <img class="card-img-top" src="images/aitp.jpg" style="width: 100%;" alt="Card image cap">
-                            <div class="card-block">
-                                <h3 class="card-title"> FSU Association of IT Professionals </h3>
-                                <p class="card-text"> AITP is an organization comprised of career-minded individuals who seek to expand their potential through events, networking, mentoring, and socialization. Click <a href="http://aitp.fsu.edu/">here</a> for more.</p>
-                            </div>
-                        </div>
-                    </div> -->
             </div>
             <div class="xtext4"></div>
 
-            <h1 class="animated pulse xtext" class="emp">
+            <!-- ========== SECTION 6: CONTACT (#contact) ========== -->
+            <h1 class="animated pulse xtext emp">
                 <a name="contact" target="_blank" title="" class="faicon-heart fa fa-phone animated pulse" id="sauce3"></a> Contact Me!</h1>
             <hr>
 
@@ -489,9 +416,8 @@
 
             <div class="row">
                 <div class="col"><a href="https://github.com/zendiii/syvn"><img src="images/github.png" class="img-fluid mx-auto d-block" style="width: 50%;" alt="GitHub"></a></div>
-                <div class="col"><a href="https://bitbucket.org/zendii/mobile-web-application-and-development"><img src="images/bitbucket.png" class="imgcenter" style="width: 50%; img-responsive;" alt="Card image cap"></a></div>
-                <div class="col"><a href="https://www.linkedin.com/in/sayvion-mayfield-94678410a"><img src="images/linkedin.png" class="imgcenter" style="width: 50%; img-responsive;" alt="Card image cap"></a></div>
-                <div class="col"><a href="https://www.instagram.com/"><img src="images/insta.png" class="imgcenter" style="width: 50%; img-responsive;" alt="Card image cap" title="remember to relax and have fun"></a></div>
+                <div class="col"><a href="https://bitbucket.org/zendii/mobile-web-application-and-development"><img src="images/bitbucket.png" class="imgcenter img-fluid" style="width: 50%;" alt="Bitbucket"></a></div>
+                <div class="col"><a href="https://www.linkedin.com/in/sayvion-mayfield-94678410a"><img src="images/linkedin.png" class="imgcenter img-fluid" style="width: 50%;" alt="LinkedIn"></a></div>
             </div>
             <div class="xtext5"></div>
         </div>
@@ -518,32 +444,20 @@
 
     </script>
 
-    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <script src="bower_components/aos/dist/aos.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/ProgressBar.js"></script>
+    <!-- ========== SCRIPTS ========== -->
+
+    <!-- Third-party libraries (local only — dead CDNs removed) -->
+    <script src="js/main.js"></script>
     <script src="js/scrollreveal.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- <script>
-        $(document).ready(function(){
-            $('#sidebar-btn').click(function(){
-                $('#sidebar').toggleClass('visible');
-            });
-        });
-
-        </script>
-        -->
-
-    <!-- jQuery -->
+    <!-- jQuery (local) -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Minified JavaScript -->
+    <!-- Bootstrap JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <!--my scripts-->
+    <!-- Custom progress bar animations (depends on main.js / ProgressBar.js) -->
     <script src="js/script.js"></script>
 
+    <!-- openNav / closeNav — hamburger side-menu toggle -->
     <script>
         function openNav() {
             document.getElementById("mySidenav").style.width = "280px";
@@ -558,7 +472,7 @@
         }
 
     </script>
-    <!--scrolling-->
+    <!-- Smooth-scroll — animates anchor-link clicks (requires jQuery) -->
     <script>
         // Select all links with hashes
         $('a[href*="#"]')
@@ -600,8 +514,7 @@
 
 
 
-    <!--scroll Reveal -->
-    <!--animate on scroll-->
+    <!-- ScrollReveal — fade-in animations on scroll -->
     <script>
         window.sr = ScrollReveal();
         if (sr.isSupported()) {
@@ -626,24 +539,17 @@
 
     </script>
 
-</body>
-
-<footer>
-    <center>
-        <div class="row5">
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="row5" style="text-align: center;">
             <div class="hoc clear">
-                <!-- dat foot############################################################################################### -->
-                <!--<p class="fl_left animated swing" id="sauce">&copy; SYVN → <a href=""><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></a></p> -->
                 <p class="container fl_right emp2 footercolor" id="space">Made with
                     <a target="_blank" href="https://www.linkedin.com/in/sayvion-mayfield-94678410a" title="tears" class="faicon-heart fa fa-heart animated pulse" id="sauce3"></a>
                 </p>
-                <!-- ################################################################################################ -->
             </div>
         </div>
+    </footer>
 
-    </center>
-
-
-</footer>
+</body>
 
 </html>

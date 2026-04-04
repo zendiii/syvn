@@ -1,6 +1,17 @@
+/**
+ * sidebar.css — Sidebar / Navigation Overrides
+ * Version: 2.1.0
+ *
+ * Overrides for the hamburger menu trigger button (#newside).
+ * Keeps the button fixed in the viewport so it remains visible while scrolling.
+ *
+ * Dependencies: styles.css (base #newside styles defined there)
+ */
+
+/* Fixed-position hamburger button — always visible top-left */
 #newside {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 1050; /* Make sure it's above other content */
+    z-index: 1050; /* Above Bootstrap modals (z-index: 1040) and other content */
 }
