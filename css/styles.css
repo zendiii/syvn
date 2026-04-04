@@ -13,7 +13,7 @@
  * 8. Spacing Utilities (.xtext*)
  * 9. Images (.imgcenter)
  * 10. ScrollReveal
- * 11. Progress Bars (.progress, .progress2, .skprogress*)
+ * 11. Progress Bars (.progress, .progress2)
  * 12. Responsive Grid Helpers
  * 13. Positioning (.rightspace, .upwardspace*)
  * 14. Horizontal Rule
@@ -342,67 +342,35 @@ footer {
 
 
 /* ==========================================================================
-   11. Progress Bars — SVG-based animated progress indicators
+   11. Progress Bars — SVG-based animated line indicators (ProgressBar.js)
    ========================================================================== */
 
-/* stupid bars */
-
 .progress {
-    height: 100px;
-    border-style: solid;
-    border-width: thick;
-    border-color: #1D2021;
+    height: 60px;
+    border: none;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .progress > svg {
     height: 100%;
-    display: contents;
-    background-color: #1D2021;
+    display: block;
     border: none;
 }
 
 .progress2 {
-    height: 100px;
-    border-style: none;
+    height: 60px;
+    border: none;
+    background-color: #333;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .progress2 > svg {
     height: 100%;
-    display: contents;
-    background-color: #1D2021;
-}
-
-.skprogress {
-    height: 100px;
-    border-style: none;
-}
-
-.skprogress > svg {
-    height: 100%;
-    display: contents;
-    background-color: #1D2021;
-}
-
-.skprogress2 {
-    height: 100px;
-    border-style: none;
-}
-
-.skprogress2 > svg {
-    height: 100%;
-    display: contents;
-    background-color: #1D2021;
-}
-
-.skprogress3 {
-    height: 100px;
-    border-style: none;
-}
-
-.skprogress3 > svg {
-    height: 100%;
-    display: contents;
-    background-color: #1D2021;
+    display: block;
+    border: none;
 }
 
 
@@ -427,9 +395,7 @@ footer {
 
 .rightspace {
     position: inherit;
-
     width: 100%;
-    height: 100px;
     font-size: 30px;
 }
 
