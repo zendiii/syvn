@@ -60,9 +60,7 @@ syvn/
 │   ├── scrollreveal.min.js # ScrollReveal library (minified)
 │   └── npm.js              # npm bootstrap helper
 │
-├── images/                 # All image assets (logos, icons, photos)
-│
-└── fonts/                  # Glyphicon font files (Bootstrap 3)
+└── images/                 # All image assets (logos, icons, photos)
 ```
 
 ## Pages
