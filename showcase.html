@@ -433,26 +433,43 @@
             {
                 id: 1,
                 title: "SD-WAN Low Level Dive and Stretch Assignment",
-                status: "in-progress",
+                status: "planning",
                 summary: "Dive into SD-WAN concepts and technologies with a focus on Cisco's SD-WAN solutions. This project includes a stretch assignment to design and implement a small SD-WAN lab environment.",
                 objectives: [
                     "Master deployment and configuration of Cisco SD-WAN.",
                     "Master SD-WAN policies and application-aware routing.",
                     "Master integrating SD-WAN with security, cloud, and other Cisco solutions.",
                 ],
-                tech: ["Cisco", "Networking", "SDWAN", "WAN", "Lab"],
+                tech: ["Cisco", "Networking", "SDWAN", "WAN", "Lab", "Real World"],
                 media: null, // null uses placeholder icon
                 mediaIcon: "fa-book",
                 details: {
-                    description: "A deep-dive study guide covering all six domains of the ENCOR 350-401 exam. Includes real-world examples, practice scenarios, and hands-on labs.",
-                    progress: "Currently on Domain 4: Network Assurance",
-                    links: [
-                        { label: "View on GitHub", url: "#" }
-                    ]
+                    description: "A natural progression from Routing and Switching is to explore centralized management services. Cisco solutions like Catalyst Center and SD-WAN offer powerful management on the LAN and WAN side respectively. This project focuses on mastering SD-WAN concepts, deployment, and policies, with a stretch assignment to design and implement SD-WAN on customer production environments.",
+                    progress: "Currently aligning with customers who have SD-WAN deployment needs.",
                 }
             },
             {
                 id: 2,
+                title: "Homelab Network Migration",
+                status: "in-progress",
+                summary: "Replacing my existing homelab network infrastructure with a cluster based scalable solution.",
+                objectives: [
+                    "Replace Raspberry Pi-based 'appliance' with cluster of mini PCs",
+                    "Migrate Home Assistant, Pi-hole, and other services to new hardware",
+                    "Separate Meraki Firewall and APs from homelab network for better performance and security",
+                    "Create a new NAS solution for media storage and backups",
+                    "Look into a localized AI solution for home use (e.g. LLaMA, Gemini, etc.)"
+                ],
+                tech: ["Proxmox", "Python", "Smart Home", "Homelab", "Linux"],
+                media: null,
+                mediaIcon: "fa-cogs",
+                details: {
+                    description: "A project focused on replacing and upgrading my homelab network infrastructure to improve performance, scalability, and security.",
+                    progress: "Currently in the planning phase, researching hardware options and migration strategies. RAM and SSDs are expensive!!",
+                }
+            },
+            {
+                id: 3,
                 title: "SYVN Resume Website",
                 status: "active",
                 summary: "Personal portfolio and resume website with modern design and smooth animations.",
@@ -479,26 +496,7 @@
                     ]
                 }
             },
-            {
-                id: 3,
-                title: "Homelab Network Migration",
-                status: "in-progress",
-                summary: "Replacing my existing homelab network infrastructure with a cluster based scalable solution.",
-                objectives: [
-                    "Replace Raspberry Pi-based network with cluster of mini PCs",
-                    "Migrate Home Assistant, Pi-hole, and other services to new hardware",
-                    "Separate Meraki Firewall and APs from homelab network for better performance and security",
-                    "Create a new NAS solution for media storage and backups",
-                    "Look into a localized AI solution for home use (e.g. LLaMA, Gemini, etc.)"
-                ],
-                tech: ["Proxmox", "Python", "Smart Home", "Homelab", "Linux"],
-                media: null,
-                mediaIcon: "fa-cogs",
-                details: {
-                    description: "A project focused on replacing and upgrading my homelab network infrastructure to improve performance, scalability, and security.",
-                    progress: "Currently in the planning phase, researching hardware options and migration strategies. RAM and SSDs are expensive!!",
-                }
-            }
+            
         ];
 
         // Render projects to the DOM
