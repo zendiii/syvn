@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2026-06-05
+
+### Added
+- Fixed top banner (`#top-banner`) with glassmorphism blur effect on both pages (`sidebar.css`)
+- SYVN title and "last updated" subtitle, right-aligned in top banner (`index.html`)
+- Project cards system on `showcase.html` with status badges, tech tags, objectives, and modal details
+- `in-progress`, `active`, and `planning` status badges with distinct colors on project cards
+
+### Changed
+- Moved `animated zoomIn` off `<body>` onto inner content wrapper (`index.html`) — fixes `position: fixed` banner being broken by CSS transform stacking context
+- Updated `#newside` hamburger to live inside `#top-banner` instead of floating standalone (`index.html`)
+- `#main` padding-top increased to 70px to account for fixed banner height (`styles.css`)
+- Sidenav z-index raised to 1052, updated colors and hover states (`styles.css`)
+- `sidebar.css` version 2.1 → 2.3: full redesign of fixed banner and hamburger button styles
+
+### Fixed
+- Banner not staying fixed while scrolling on `index.html` (caused by `animated zoomIn` transform on `<body>` creating a new stacking context)
+- Content sliding under fixed banner on `index.html` (`#main` ID specificity was overriding `body` padding-top)
+
 ## [2.2.0] - 2025-07-11
 
 ### Added
