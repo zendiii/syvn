@@ -24,59 +24,320 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <title>Showcase — Under Construction</title>
+    <title>Showcase</title>
 
     <style>
-        .construction-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        /* ========== SHOWCASE LAYOUT ========== */
+        body {
+            background-color: #1D2021;
+            color: #fff;
+            padding-top: 70px;
+        }
+        
+        .showcase-wrapper {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .showcase-header {
             text-align: center;
-            padding: 2rem;
+            margin-bottom: 3rem;
         }
-        .construction-icon {
-            font-size: 5rem;
-            color: #f0ad4e;
-            margin-bottom: 1.5rem;
-        }
-        .construction-title {
+        
+        .showcase-header h1 {
             font-family: 'Raleway', sans-serif;
             font-weight: 800;
             font-size: 2.5rem;
             color: #fff;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
-        .construction-text {
+        
+        .showcase-header p {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
             color: #aaa;
-            max-width: 500px;
-            margin-bottom: 2rem;
         }
-        .construction-btn {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 600;
-            padding: 0.75rem 2rem;
-            border: 2px solid #f0ad4e;
-            color: #f0ad4e;
-            background: transparent;
-            border-radius: 4px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .construction-btn:hover {
-            background: #f0ad4e;
-            color: #1D2021;
-            text-decoration: none;
-        }
-        .construction-divider {
+        
+        .showcase-divider {
             width: 80px;
             height: 3px;
-            background: #f0ad4e;
-            margin: 0 auto 1.5rem;
+            background: #007bff;
+            margin: 1rem auto;
+        }
+        
+        /* ========== PROJECT CARDS ========== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .project-card {
+            background: #282828;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #3a3a3a;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card:hover {
+            border-color: #007bff;
+            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+            transform: translateY(-4px);
+        }
+        
+        /* ========== PROJECT MEDIA ========== */
+        .project-media {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .project-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-media-placeholder {
+            font-size: 4rem;
+            color: #555;
+            opacity: 0.5;
+        }
+        
+        /* ========== PROJECT CONTENT ========== */
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .project-status.active {
+            background: #28a745;
+            color: #fff;
+        }
+        
+        .project-status.in-progress {
+            background: #ffc107;
+            color: #000;
+        }
+        
+        .project-status.planning {
+            background: #6c757d;
+            color: #fff;
+        }
+        
+        /* ========== HIGH-LEVEL SUMMARY ========== */
+        .project-summary {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            color: #bbb;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .project-objectives {
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-objectives-label {
+            font-weight: 600;
+            color: #007bff;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-objectives ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            list-style: none;
+        }
+        
+        .project-objectives li {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 0.4rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        
+        .project-objectives li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+        
+        /* ========== TECH STACK ========== */
+        .project-tech {
+            margin-bottom: 1rem;
+        }
+        
+        .project-tech-label {
+            font-weight: 600;
+            color: #28a745;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-tag {
+            background: #3a3a3a;
+            border: 1px solid #555;
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #aaa;
+            transition: all 0.2s ease;
+        }
+        
+        .tech-tag:hover {
+            border-color: #28a745;
+            color: #28a745;
+        }
+        
+        /* ========== EXPAND BUTTON ========== */
+        .project-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid #3a3a3a;
+        }
+        
+        .expand-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: #007bff;
+            color: #fff;
             border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .expand-btn:hover {
+            background: #0056b3;
+        }
+        
+        /* ========== DETAILED INFO (COLLAPSIBLE) ========== */
+        .project-details {
+            display: none;
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border: 1px solid #3a3a3a;
+        }
+        
+        .project-details.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .details-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .details-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .details-title {
+            font-weight: 700;
+            color: #007bff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+        
+        .details-content {
+            font-size: 0.95rem;
+            color: #bbb;
+            line-height: 1.6;
+        }
+        
+        .details-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .details-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+        
+        .details-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .showcase-header h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -84,7 +345,9 @@
 <body id="main">
 
     <!-- ======================== NAVIGATION ======================== -->
-    <span id="newside" class="navicon-button larr animated bounce blues" onclick="openNav()">&#9779;</span>
+    <nav id="top-banner">
+        <span id="newside" class="navicon-button larr animated bounce blues" onclick="openNav()">&#9779;</span>
+    </nav>
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -92,18 +355,26 @@
     </div>
 
     <!-- ======================== UNDER CONSTRUCTION ======================== -->
-    <div class="construction-wrapper animated zoomIn">
-        <div class="construction-icon animated pulse infinite">
-            <i class="fa fa-wrench"></i>
+    <div class="showcase-wrapper animated zoomIn">
+        <div class="xtext6"></div>
+        <!-- Header -->
+        <div class="showcase-header">
+            <h1><i class="fa fa-lightbulb-o"></i> Projects & Showcase</h1>
+            <div class="showcase-divider"></div>
+            <p>Current projects, homelab experiments, and works in progress</p>
         </div>
-        <h1 class="construction-title">Under Construction</h1>
-        <hr class="construction-divider">
-        <p class="construction-text">
-            This page is being rebuilt with something new. Check back soon!
-        </p>
-        <a href="index.html" class="construction-btn">
-            <i class="fa fa-arrow-left"></i>&nbsp; Back to Resume
-        </a>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projects will be dynamically loaded here or manually added -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" style="text-align: center; padding: 3rem;">
+            <i class="fa fa-folder-open" style="font-size: 3rem; color: #555; margin-bottom: 1rem; display: block;"></i>
+            <p style="color: #aaa; font-size: 1.1rem;">That's it... for now. Check back soon as I add new experiments and projects!</p>
+            <a href="index.html" style="color: #007bff; text-decoration: none; font-weight: 600;">← Back to Resume</a>
+        </div>
     </div>
 
     <!-- ======================== FOOTER ======================== -->
@@ -120,13 +391,15 @@
     </footer>
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110491759-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-110491759-1');
-    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HS2L32HW8M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HS2L32HW8M');
+</script>
 
     <!-- jQuery (local) -->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -146,6 +419,216 @@
             document.getElementById("main").style.marginLeft = "0";
             document.body.style.backgroundColor = "#1D2021";
         }
+    </script>
+
+    <!-- Project Management Script -->
+    <script>
+        // Sample projects data structure
+        // To add projects, modify this array or load from an external JSON file
+        const projects = [
+            {
+                id: 1,
+                title: "SD-WAN Low Level Dive and Stretch Assignment",
+                status: "in-progress",
+                summary: "Dive into SD-WAN concepts and technologies with a focus on Cisco's SD-WAN solutions. This project includes a stretch assignment to design and implement a small SD-WAN lab environment.",
+                objectives: [
+                    "Master deployment and configuration of Cisco SD-WAN.",
+                    "Master SD-WAN policies and application-aware routing.",
+                    "Master integrating SD-WAN with security, cloud, and other Cisco solutions.",
+                ],
+                tech: ["Cisco", "Networking", "SDWAN", "WAN", "Lab"],
+                media: null, // null uses placeholder icon
+                mediaIcon: "fa-book",
+                details: {
+                    description: "A deep-dive study guide covering all six domains of the ENCOR 350-401 exam. Includes real-world examples, practice scenarios, and hands-on labs.",
+                    progress: "Currently on Domain 4: Network Assurance",
+                    links: [
+                        { label: "View on GitHub", url: "#" }
+                    ]
+                }
+            },
+            {
+                id: 2,
+                title: "SYVN Resume Website",
+                status: "active",
+                summary: "Personal portfolio and resume website with modern design and smooth animations.",
+                objectives: [
+                    "Showcase professional experience",
+                    "Display technical skills and certifications",
+                    "Provide project showcase and contact",
+                    "Maintain clean, responsive design"
+                ],
+                tech: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "GitHub Pages"],
+                media: null,
+                mediaIcon: "fa-globe",
+                details: {
+                    description: "A modern, responsive resume website built with Bootstrap 4. Features smooth scrolling, animations, and collapsible employment details.",
+                    highlights: [
+                        "Responsive design for all devices",
+                        "Smooth scroll animations",
+                        "Collapsible employment history",
+                        "Progress bars for skill levels"
+                    ],
+                    technologies: "HTML5, CSS3, Bootstrap 4, jQuery, Font Awesome",
+                    links: [
+                        { label: "GitHub Repo", url: "https://github.com/zendiii/syvn" }
+                    ]
+                }
+            },
+            {
+                id: 3,
+                title: "Homelab Network Migration",
+                status: "in-progress",
+                summary: "Replacing my existing homelab network infrastructure with a cluster based scalable solution.",
+                objectives: [
+                    "Replace Raspberry Pi-based network with cluster of mini PCs",
+                    "Migrate Home Assistant, Pi-hole, and other services to new hardware",
+                    "Separate Meraki Firewall and APs from homelab network for better performance and security",
+                    "Create a new NAS solution for media storage and backups",
+                    "Look into a localized AI solution for home use (e.g. LLaMA, Gemini, etc.)"
+                ],
+                tech: ["Proxmox", "Python", "Smart Home", "Homelab", "Linux"],
+                media: null,
+                mediaIcon: "fa-cogs",
+                details: {
+                    description: "A project focused on replacing and upgrading my homelab network infrastructure to improve performance, scalability, and security.",
+                    progress: "Currently in the planning phase, researching hardware options and migration strategies. RAM and SSDs are expensive!!",
+                }
+            }
+        ];
+
+        // Render projects to the DOM
+        function renderProjects() {
+            const grid = document.getElementById('projectsGrid');
+            const emptyState = document.getElementById('emptyState');
+            
+            if (projects.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+            
+            grid.innerHTML = projects.map(project => `
+                <div class="project-card" data-project-id="${project.id}">
+                    <!-- Media Section -->
+                    <div class="project-media">
+                        ${project.media 
+                            ? `<img src="${project.media}" alt="${project.title}">` 
+                            : `<i class="fa ${project.mediaIcon} project-media-placeholder"></i>`
+                        }
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="project-content">
+                        <!-- Title & Status -->
+                        <div>
+                            <h3 class="project-title">${project.title}</h3>
+                            <span class="project-status ${project.status}">
+                                ${project.status === 'active' ? '● Active' : 
+                                  project.status === 'in-progress' ? '◐ In Progress' : 
+                                  '○ Planning'}
+                            </span>
+                        </div>
+
+                        <!-- Summary -->
+                        <p class="project-summary">${project.summary}</p>
+
+                        <!-- Objectives -->
+                        <div class="project-objectives">
+                            <div class="project-objectives-label">Key Objectives</div>
+                            <ul>
+                                ${project.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <!-- Tech Stack -->
+                        <div class="project-tech">
+                            <div class="project-tech-label">Tech Stack</div>
+                            <div class="tech-tags">
+                                ${project.tech.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Footer with Expand Button -->
+                        <div class="project-footer">
+                            <button class="expand-btn" onclick="toggleDetails(${project.id})">
+                                <i class="fa fa-chevron-down"></i> Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Collapsible Details Section -->
+                    <div class="project-details" id="details-${project.id}">
+                        ${project.details.description ? `
+                            <div class="details-section">
+                                <div class="details-title">About This Project</div>
+                                <p class="details-content">${project.details.description}</p>
+                            </div>
+                        ` : ''}
+                        
+                        ${project.details.progress ? `
+                            <div class="details-section">
+                                <div class="details-title">Current Progress</div>
+                                <p class="details-content">${project.details.progress}</p>
+                            </div>
+                        ` : ''}
+                        
+                        ${project.details.highlights ? `
+                            <div class="details-section">
+                                <div class="details-title">Key Highlights</div>
+                                <ul class="details-list">
+                                    ${project.details.highlights.map(h => `<li>${h}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        
+                        ${project.details.technologies ? `
+                            <div class="details-section">
+                                <div class="details-title">Technologies Used</div>
+                                <p class="details-content">${project.details.technologies}</p>
+                            </div>
+                        ` : ''}
+                        
+                        ${project.details.links && project.details.links.length > 0 ? `
+                            <div class="details-section">
+                                <div class="details-title">Links</div>
+                                <div class="details-content">
+                                    ${project.details.links.map(link => 
+                                        `<div style="margin-bottom: 0.5rem;">
+                                            <a href="${link.url}" style="color: #007bff; text-decoration: none; font-weight: 600;">
+                                                <i class="fa fa-external-link"></i> ${link.label}
+                                            </a>
+                                        </div>`
+                                    ).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Toggle details visibility
+        function toggleDetails(projectId) {
+            const detailsEl = document.getElementById(`details-${projectId}`);
+            const btnEl = document.querySelector(`.project-card[data-project-id="${projectId}"] .expand-btn`);
+            
+            detailsEl.classList.toggle('show');
+            
+            // Rotate button icon
+            const icon = btnEl.querySelector('i');
+            icon.style.transform = detailsEl.classList.contains('show') 
+                ? 'rotate(180deg)' 
+                : 'rotate(0)';
+            icon.style.transition = 'transform 0.3s ease';
+            
+            // Change button text
+            btnEl.textContent = detailsEl.classList.contains('show') ? ' Hide Details' : ' Details';
+            btnEl.prepend(icon);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', renderProjects);
     </script>
 
 </body>

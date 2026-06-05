@@ -1,17 +1,52 @@
 /**
  * sidebar.css — Sidebar / Navigation Overrides
- * Version: 2.1.0
+ * Version: 2.3.0
  *
- * Overrides for the hamburger menu trigger button (#newside).
- * Keeps the button fixed in the viewport so it remains visible while scrolling.
+ * Persistent hamburger menu with blurred banner background.
+ * Creates a fixed top bar with glassmorphism effect while user scrolls.
  *
  * Dependencies: styles.css (base #newside styles defined there)
  */
 
-/* Fixed-position hamburger button — always visible top-left */
-#newside {
+/* ========== FIXED TOP BANNER ========== */
+#top-banner {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1050; /* Above Bootstrap modals (z-index: 1040) and other content */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: rgba(29, 32, 33, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1049;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+}
+
+/* Add top padding to body to accommodate fixed banner */
+body {
+    padding-top: 70px;
+}
+
+/* ========== HAMBURGER BUTTON (lives inside #top-banner) ========== */
+#newside {
+    height: 70px;
+    padding: 0 24px;
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    /* override any inherited position from animated classes */
+    position: static;
+}
+
+#newside:hover {
+    color: #11c1f3;
 }

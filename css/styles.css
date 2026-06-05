@@ -192,40 +192,65 @@ footer {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1052;
     top: 0;
     left: 0;
-    background-color: #181818;
+    background: rgba(29, 32, 33, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: 0.4s;
+    padding-top: 70px;
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.4);
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 12px 12px 12px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 22px;
     color: #fff;
+    background: transparent;
     display: block;
-    transition: 0.3s;
+    transition: color 0.2s ease, background 0.2s ease;
+    letter-spacing: 0.03em;
 }
 
-.sidenav a:hover,
-.offcanvas a:focus {
-    color: #c9c9c9;
+.sidenav a:link,
+.sidenav a:visited {
+    background: transparent;
+    color: #fff;
+}
+
+.sidenav a:hover {
+    color: #11c1f3;
+    background: rgba(17, 193, 243, 0.08);
+    font-weight: normal;
 }
 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 20px;
-    font-size: 36px;
-    margin-left: 40px;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.sidenav .closebtn:hover {
+    color: #EA4C89;
+    background: rgba(234, 76, 137, 0.08);
 }
 
 #main {
     transition: margin-left .5s;
     padding: 16px;
+    padding-top: 70px;
 }
 
 @media screen and (max-height: 450px) {
@@ -280,10 +305,14 @@ footer {
     font-size: 36px;
     font-weight: 500;
     font-stretch: expanded;
-    height: 5%;
-    width: 1%;
+    height: auto;
+    width: auto;
     cursor: pointer;
     position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1050;
+    padding: 10px 15px;
 }
 
 #container {
