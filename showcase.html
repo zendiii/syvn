@@ -116,6 +116,13 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .project-media img.media-contain {
+            object-fit: contain;
+            padding: 1.5rem;
+            width: auto;
+            height: 100%;
+        }
         
         .project-media-placeholder {
             font-size: 4rem;
@@ -432,6 +439,36 @@
         // To add projects, modify this array or load from an external JSON file
         const projects = [
             {
+                id: 4,
+                title: "Dino's Tires Website",
+                status: "in-progress",
+                summary: "Website for Dino's Tires showcasing products and services.",
+                objectives: [
+                    "Showcase tire products and services",
+                    "Provide online appointment scheduling",
+                    "Integrate with inventory management system",
+                    "Maintain clean, responsive design"
+                ],
+                tech: ["Vite", "React", "Tailwind CSS", "JavaScript", "GitHub Pages", "Vercel"],
+                media: "images/dinos.png",
+                mediaContain: true,
+                mediaIcon: "fa-globe",
+                details: {
+                    description: "A modern, responsive website built with Vite and React for Dino's Tires. Features smooth scrolling, animations, and a user-friendly interface.",
+                    highlights: [
+                        "Responsive design for all devices",
+                        "Smooth scroll animations",
+                        "Lightweight user interface",
+                        "Payment integration for online appointments and shipping"
+                    ],
+                    technologies: "Vite, Tailwind CSS, Vercel, React",
+                    links: [
+                        { label: "GitHub Repo", url: "https://github.com/zendiii/Tires" },
+                        { label: "Live Site", url: "https://dinos-tires.vercel.app/" }
+                    ]
+                }
+            },
+            {
                 id: 1,
                 title: "SD-WAN Low Level Dive and Stretch Assignment",
                 status: "planning",
@@ -442,7 +479,8 @@
                     "Master integrating SD-WAN with security, cloud, and other Cisco solutions.",
                 ],
                 tech: ["Cisco", "Networking", "SDWAN", "WAN", "Lab", "Real World"],
-                media: null, // null uses placeholder icon
+                media: "images/sdwan.webp",
+                mediaContain: true, // null uses placeholder icon
                 mediaIcon: "fa-book",
                 details: {
                     description: "A natural progression from Routing and Switching is to explore centralized management services. Cisco solutions like Catalyst Center and SD-WAN offer powerful management on the LAN and WAN side respectively. This project focuses on mastering SD-WAN concepts, deployment, and policies, with a stretch assignment to design and implement SD-WAN on customer production environments.",
@@ -481,8 +519,9 @@
                     "Maintain clean, responsive design"
                 ],
                 tech: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "GitHub Pages"],
-                media: null,
-                mediaIcon: "fa-globe",
+                media: "images/syv1n.jpg",
+                mediaContain: true,
+                
                 details: {
                     description: "A modern, responsive resume website built with Bootstrap 4. Features smooth scrolling, animations, and collapsible employment details.",
                     highlights: [
@@ -494,35 +533,6 @@
                     technologies: "HTML5, CSS3, Bootstrap 4, jQuery, Font Awesome",
                     links: [
                         { label: "GitHub Repo", url: "https://github.com/zendiii/syvn" }
-                    ]
-                }
-            },
-            {
-                id: 4,
-                title: "Dino's Tires Website",
-                status: "in-progress",
-                summary: "Website for Dino's Tires showcasing products and services.",
-                objectives: [
-                    "Showcase tire products and services",
-                    "Provide online appointment scheduling",
-                    "Integrate with inventory management system",
-                    "Maintain clean, responsive design"
-                ],
-                tech: ["Vite", "React", "Tailwind CSS", "JavaScript", "GitHub Pages", "Vercel"],
-                media: null,
-                mediaIcon: "fa-globe",
-                details: {
-                    description: "A modern, responsive website built with Vite and React for Dino's Tires. Features smooth scrolling, animations, and a user-friendly interface.",
-                    highlights: [
-                        "Responsive design for all devices",
-                        "Smooth scroll animations",
-                        "Lightweight user interface",
-                        "Payment integration for online appointments and shipping"
-                    ],
-                    technologies: "Vite, Tailwind CSS, Vercel, React",
-                    links: [
-                        { label: "GitHub Repo", url: "https://github.com/zendiii/Tires" },
-                        { label: "Live Site", url: "https://dinos-tires.vercel.app/" }
                     ]
                 }
             },
@@ -543,8 +553,8 @@
                 <div class="project-card" data-project-id="${project.id}">
                     <!-- Media Section -->
                     <div class="project-media">
-                        ${project.media 
-                            ? `<img src="${project.media}" alt="${project.title}">` 
+                        ${project.media
+                            ? `<img src="${project.media}" alt="${project.title}"${project.mediaContain ? ' class="media-contain"' : ''}>`
                             : `<i class="fa ${project.mediaIcon} project-media-placeholder"></i>`
                         }
                     </div>
